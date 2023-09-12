@@ -45,4 +45,8 @@ public class ModEntityTypesImpl {
     public static EntityType<NeurosamaEntity> getNeurosamaEntity() {
         return NEUROSAMA;
     }
+
+    public static EntityType<IronCowEntity> getIronCowEntity() {
+        return IRON_COW;
+    }
 }

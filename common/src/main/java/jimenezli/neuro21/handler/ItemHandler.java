@@ -3,8 +3,10 @@ package jimenezli.neuro21.handler;
 import dev.architectury.registry.CreativeTabRegistry;
 import jimenezli.neuro21.ModItems;
 import jimenezli.neuro21.Neuro21Mod;
+import jimenezli.neuro21.item.ChipItem;
 import jimenezli.neuro21.item.HeartItem;
 import jimenezli.neuro21.item.IronmilkItem;
+import jimenezli.neuro21.item.UpgradeChipItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
@@ -34,4 +36,10 @@ public class ItemHandler {
 
     public static final String IRONMILK_NAME = "ironmilk";
     public static final Supplier<IronmilkItem> IRONMILK_ITEM = IronmilkItem::new;
+
+    public static final String CHIP_NAME = "chip";
+    public static final Supplier<ChipItem> CHIP_ITEM = ChipItem::new;
+
+    public static final String UPGRADE_CHIP_NAME = "upgrade_chip";
+    public static final Supplier<UpgradeChipItem> UPGRADE_CHIP_ITEM = UpgradeChipItem::new;
 }

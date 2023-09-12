@@ -1,7 +1,7 @@
 package jimenezli.neuro21.entity;
 
 import jimenezli.neuro21.ModItems;
-import jimenezli.neuro21.handler.ItemHandler;
+import jimenezli.neuro21.entity.ai.goal.NeurosamaFamilyHurtByTargetGoal;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
@@ -28,6 +28,13 @@ public class IronCowEntity extends Cow {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 100.0).add(Attributes.MOVEMENT_SPEED, 0.2);
+    }
+
+    /**
+     * Warning! if you attack the cow, the Neuro-sama family will attack you!
+     */
+    public void registerGoals() {
+        this.targetSelector.addGoal(1, new NeurosamaFamilyHurtByTargetGoal(this));
     }
 
     @Override

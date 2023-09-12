@@ -18,4 +18,9 @@ public class ModItems {
     public static Item getIronmilkItem() {
         throw new AssertionError();
     }
+
+    @ExpectPlatform
+    public static Item getChipItem() {
+        throw new AssertionError();
+    }
 }

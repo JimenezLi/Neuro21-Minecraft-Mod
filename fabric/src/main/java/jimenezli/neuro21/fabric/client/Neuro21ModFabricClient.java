@@ -15,6 +15,6 @@ public class Neuro21ModFabricClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntityTypes.getVedalEntity(), VedalRenderer::new);
         EntityRendererRegistry.register(ModEntityTypes.getAnnyEntity(), AnnyRenderer::new);
         EntityRendererRegistry.register(ModEntityTypes.getNeurosamaEntity(), NeurosamaRenderer::new);
-        EntityRendererRegistry.register(ModEntityTypesImpl.IRON_COW, IronCowRenderer::new);
+        EntityRendererRegistry.register(ModEntityTypes.getIronCowEntity(), IronCowRenderer::new);
     }
 }
