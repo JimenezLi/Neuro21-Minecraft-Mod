@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "neuro21",
+  "version": "${version}",
+  "name": "Neuro21",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "JimenezLi"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "Insert License Here",
+  "icon": "logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "jimenezli.neuro21.fabric.Neuro21ModFabric"
+    ],
+    "client": [
+      "jimenezli.neuro21.fabric.client.Neuro21ModFabricClient"
+    ]
+  },
+  "mixins": [
+    "neuro21_fabric.mixins.json",
+    "neuro21.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19.2",
+    "architectury": ">=6.5.77"
+  }
+}
