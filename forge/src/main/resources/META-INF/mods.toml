@@ -7,11 +7,11 @@ license = "Insert License Here"
 modId = "neuro21"
 version = "${version}"
 displayName = "Neuro21"
-authors = "Me!"
+authors = "JimenezLi"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Mod for AI VTuber Neuro-sama; 9+10=21!
 '''
-#logoFile = ""
+logoFile = "logo.png"
 
 [[dependencies.neuro21]]
 modId = "forge"

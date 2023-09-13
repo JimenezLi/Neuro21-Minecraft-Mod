@@ -1,5 +1,7 @@
 {
   "entity.neuro21.neurosama": "Neuro-sama",
+  "entity.neuro21.evil_neurosama": "Evil Neuro-sama",
+  "entity.neuro21.hiyori": "Hiyori",
   "entity.neuro21.vedal": "Vedal",
   "entity.neuro21.anny": "Anny",
   "entity.neuro21.iron_cow": "Iron Cow",
@@ -11,6 +13,8 @@
   "item.neuro21.upgrade_chip": "Upgrade Chip",
   "item.neuro21.upgrade_chip.description": "Try using it on turtle, fox and cow",
   "item.neuro21.neurosama_spawn_egg": "Neuro-sama Spawn Egg",
+  "item.neuro21.evil_neurosama_spawn_egg": "Evil Neuro-sama Spawn Egg",
+  "item.neuro21.hiyori_spawn_egg": "Hiyori Spawn Egg",
   "item.neuro21.vedal_spawn_egg": "Vedal Spawn Egg",
   "item.neuro21.anny_spawn_egg": "Anny Spawn Egg",
   "item.neuro21.iron_cow_spawn_egg": "Iron Cow Spawn Egg",

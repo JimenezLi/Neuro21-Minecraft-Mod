@@ -6,6 +6,7 @@
   "client": [
   ],
   "mixins": [
+    "ZombieLootMixin"
   ],
   "injectors": {
     "defaultRequire": 1

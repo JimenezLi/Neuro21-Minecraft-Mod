@@ -7,7 +7,6 @@
     "TitleScreenMixin"
   ],
   "mixins": [
-    "ZombieLootMixin"
   ],
   "injectors": {
     "defaultRequire": 1

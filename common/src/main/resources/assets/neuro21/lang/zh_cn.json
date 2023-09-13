@@ -1,5 +1,7 @@
 {
   "entity.neuro21.neurosama": "Neuro-sama",
+  "entity.neuro21.evil_neurosama": "Evil Neuro-sama",
+  "entity.neuro21.hiyori": "Hiyori",
   "entity.neuro21.vedal": "Vedal",
   "entity.neuro21.anny": "Anny",
   "entity.neuro21.iron_cow": "铁牛",
@@ -11,6 +13,8 @@
   "item.neuro21.upgrade_chip": "升级芯片",
   "item.neuro21.upgrade_chip.description": "可用于：乌龟，狐狸，牛",
   "item.neuro21.neurosama_spawn_egg": "Neuro-sama刷怪蛋",
+  "item.neuro21.evil_neurosama_spawn_egg": "Evil Neuro-sama刷怪蛋",
+  "item.neuro21.hiyori_spawn_egg": "Hiyori刷怪蛋",
   "item.neuro21.vedal_spawn_egg": "Vedal刷怪蛋",
   "item.neuro21.anny_spawn_egg": "Anny刷怪蛋",
   "item.neuro21.iron_cow_spawn_egg": "铁牛刷怪蛋",

@@ -1,10 +1,7 @@
 package jimenezli.neuro21;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
-import jimenezli.neuro21.entity.AnnyEntity;
-import jimenezli.neuro21.entity.IronCowEntity;
-import jimenezli.neuro21.entity.NeurosamaEntity;
-import jimenezli.neuro21.entity.VedalEntity;
+import jimenezli.neuro21.entity.*;
 import net.minecraft.world.entity.EntityType;
 
 public class ModEntityTypes {
@@ -29,7 +26,7 @@ public class ModEntityTypes {
     }
 
     @ExpectPlatform
-    public static EntityType<NeurosamaEntity> getNeurosamaEntity() {
+    public static EntityType<? extends NeurosamaEntity> getNeurosamaEntity(NeurosamaType type) {
         throw new AssertionError();
     }
 

@@ -26,13 +26,19 @@ import org.jetbrains.annotations.Nullable;
 public class NeurosamaEntity extends Animal {
     private int heartTime = this.random.nextInt(6000) + 6000;
 
+    protected NeurosamaType neurosamaType = NeurosamaType.NEUROSAMA;
+
+    public NeurosamaType getNeurosamaType() {
+        return this.neurosamaType;
+    }
+
     public NeurosamaEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
     protected void registerGoals() {
+        this.registerCustomGoals();
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new MoveToLavaGoal(this, 4.0D));
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0D, false));
         this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 0.8D));
@@ -42,6 +48,10 @@ public class NeurosamaEntity extends Animal {
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Fox.class, 8.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(1, new NeurosamaFamilyHurtByTargetGoal(this));
+    }
+
+    protected void registerCustomGoals() {
+        this.goalSelector.addGoal(1, new MoveToLavaGoal(this, 4.0D));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -90,10 +100,30 @@ public class NeurosamaEntity extends Animal {
         return itemStack.getItem() == ModItems.getHeartItem();
     }
 
+    public boolean canMate(Animal animal) {
+        if (animal == this) {
+            return false;
+        } else if (!(animal instanceof NeurosamaEntity)) {
+            return false;
+        } else {
+            return this.isInLove() && animal.isInLove();
+        }
+    }
+
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
-        return ModEntityTypes.getNeurosamaEntity().create(serverLevel);
+        NeurosamaType type = this.neurosamaType;
+        if (ageableMob instanceof NeurosamaEntity) {
+            if (this.neurosamaType != ((NeurosamaEntity) ageableMob).neurosamaType) {
+                if (this.random.nextDouble() < 0.1) {
+                    type = NeurosamaType.HIYORI;
+                } else {
+                    type = (this.random.nextDouble() < 0.5) ? this.neurosamaType : ((NeurosamaEntity) ageableMob).neurosamaType;
+                }
+            }
+        }
+        return ModEntityTypes.getNeurosamaEntity(type).create(serverLevel);
     }
 
     /**

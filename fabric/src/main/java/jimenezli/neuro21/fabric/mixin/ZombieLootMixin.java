@@ -1,4 +1,4 @@
-package jimenezli.neuro21.mixin;
+package jimenezli.neuro21.fabric.mixin;
 
 import jimenezli.neuro21.ModItems;
 import jimenezli.neuro21.handler.ItemHandler;

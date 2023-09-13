@@ -1,4 +1,4 @@
-package jimenezli.neuro21.fabric.client.renderer.entity;
+package jimenezli.neuro21.client.entity;
 
 import jimenezli.neuro21.Neuro21Mod;
 import net.fabricmc.api.EnvType;

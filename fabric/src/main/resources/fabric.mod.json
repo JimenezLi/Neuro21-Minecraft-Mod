@@ -3,13 +3,12 @@
   "id": "neuro21",
   "version": "${version}",
   "name": "Neuro21",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Mod for AI VTuber Neuro-sama; 9+10=21!",
   "authors": [
     "JimenezLi"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/JimenezLi/Neuro21-Minecraft-Mod"
   },
   "license": "Insert License Here",
   "icon": "logo.png",

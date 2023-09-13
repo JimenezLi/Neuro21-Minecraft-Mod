@@ -28,6 +28,8 @@ public class ModItemsImpl {
         registerSpawnEgg(EntityHandler.VEDAL_NAME, ItemHandler.spawnEggSupplierBuilder(ModEntityTypesImpl.VEDAL, 0xe7e7e7, 0x00afaf));
         registerSpawnEgg(EntityHandler.ANNY_NAME, ItemHandler.spawnEggSupplierBuilder(ModEntityTypesImpl.ANNY, 0xdcced2, 0xf8f7f7));
         registerSpawnEgg(EntityHandler.NEUROSAMA_NAME, ItemHandler.spawnEggSupplierBuilder(ModEntityTypesImpl.NEUROSAMA, 0xf7e2ce, 0xd2b098));
+        registerSpawnEgg(EntityHandler.EVIL_NEUROSAMA_NAME, ItemHandler.spawnEggSupplierBuilder(ModEntityTypesImpl.EVIL_NEUROSAMA, 0x352e25, 0xd2b098));
+        registerSpawnEgg(EntityHandler.HIYORI_NAME, ItemHandler.spawnEggSupplierBuilder(ModEntityTypesImpl.HIYORI, 0xfff2d8, 0x9f8b7c));
         registerSpawnEgg(EntityHandler.IRON_COW_NAME, ItemHandler.spawnEggSupplierBuilder(ModEntityTypesImpl.IRON_COW, 0xe9e9e9, 0xc4c4c4));
     }
 

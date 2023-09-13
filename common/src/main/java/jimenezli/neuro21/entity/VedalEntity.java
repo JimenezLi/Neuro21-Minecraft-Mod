@@ -59,6 +59,7 @@ public class VedalEntity extends Turtle {
     }
 
     public NeurosamaEntity getBreedOffspring(ServerLevel world, AgeableMob ageable) {
-        return ModEntityTypes.getNeurosamaEntity().create(world);
+        NeurosamaType type = (this.random.nextDouble() < 0.9) ? NeurosamaType.NEUROSAMA : NeurosamaType.EVIL_NEUROSAMA;
+        return ModEntityTypes.getNeurosamaEntity(type).create(world);
     }
 }
