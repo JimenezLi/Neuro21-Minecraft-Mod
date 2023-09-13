@@ -8,4 +8,8 @@ This is a Minecraft mod featuring AI Vtuber Neuro-sama.
 
 ## Changelog
 
-see [CHANGELOG.md](./CHANGELOG.md)
+see [CHANGELOG.md](./CHANGELOG.md).
+
+## Special Thanks
+
+This mod is based on [Architectury API](https://github.com/architectury/architectury-templates).
