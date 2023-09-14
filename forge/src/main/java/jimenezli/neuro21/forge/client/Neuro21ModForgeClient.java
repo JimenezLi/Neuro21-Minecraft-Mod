@@ -2,11 +2,11 @@ package jimenezli.neuro21.forge.client;
 
 import jimenezli.neuro21.ModEntityTypes;
 import jimenezli.neuro21.Neuro21Mod;
-import jimenezli.neuro21.client.entity.AnnyRenderer;
-import jimenezli.neuro21.client.entity.IronCowRenderer;
-import jimenezli.neuro21.client.entity.NeurosamaRenderer;
-import jimenezli.neuro21.client.entity.VedalRenderer;
-import jimenezli.neuro21.entity.NeurosamaType;
+import jimenezli.neuro21.client.renderer.entity.AnnyRenderer;
+import jimenezli.neuro21.client.renderer.entity.IronCowRenderer;
+import jimenezli.neuro21.client.renderer.entity.NeurosamaRenderer;
+import jimenezli.neuro21.client.renderer.entity.VedalRenderer;
+import jimenezli.neuro21.util.NeurosamaType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

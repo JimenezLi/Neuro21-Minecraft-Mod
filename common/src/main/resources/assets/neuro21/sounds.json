@@ -1,0 +1,23 @@
+{
+  "neurosama_ambient": {
+    "sounds": [
+      "neuro21:neurosama_ambient_1",
+      "neuro21:neurosama_ambient_2",
+      "neuro21:neurosama_ambient_3"
+    ],
+    "subtitle": "subtitles.neuro21.neurosama_ambient"
+  },
+  "neurosama_heart": {
+    "sounds": [
+      "neuro21:neurosama_heart_1"
+    ],
+    "subtitle": "subtitles.neuro21.neurosama_heart"
+  },
+  "evil_neurosama_ambient": {
+    "sounds": [
+      "neuro21:evil_neurosama_ambient_1",
+      "neuro21:evil_neurosama_ambient_2"
+    ],
+    "subtitle": "subtitles.neuro21.evil_neurosama_ambient"
+  }
+}

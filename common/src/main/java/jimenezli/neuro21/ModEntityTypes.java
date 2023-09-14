@@ -2,6 +2,7 @@ package jimenezli.neuro21;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import jimenezli.neuro21.entity.*;
+import jimenezli.neuro21.util.NeurosamaType;
 import net.minecraft.world.entity.EntityType;
 
 public class ModEntityTypes {

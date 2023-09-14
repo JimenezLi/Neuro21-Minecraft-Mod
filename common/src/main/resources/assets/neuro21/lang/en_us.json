@@ -19,5 +19,9 @@
   "item.neuro21.anny_spawn_egg": "Anny Spawn Egg",
   "item.neuro21.iron_cow_spawn_egg": "Iron Cow Spawn Egg",
 
-  "itemGroup.neuro21.neuro21_tab": "Neuro21"
+  "itemGroup.neuro21.neuro21_tab": "Neuro21",
+
+  "subtitles.neuro21.neurosama_ambient": "Neuro-sama talks",
+  "subtitles.neuro21.neurosama_heart": "Neuro-sama produces heart",
+  "subtitles.neuro21.evil_neurosama_ambient": "Evil Neuro-sama talks"
 }

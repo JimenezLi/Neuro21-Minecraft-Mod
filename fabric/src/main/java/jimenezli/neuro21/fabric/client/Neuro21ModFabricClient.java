@@ -1,11 +1,11 @@
 package jimenezli.neuro21.fabric.client;
 
 import jimenezli.neuro21.ModEntityTypes;
-import jimenezli.neuro21.client.entity.AnnyRenderer;
-import jimenezli.neuro21.client.entity.IronCowRenderer;
-import jimenezli.neuro21.client.entity.NeurosamaRenderer;
-import jimenezli.neuro21.client.entity.VedalRenderer;
-import jimenezli.neuro21.entity.NeurosamaType;
+import jimenezli.neuro21.client.renderer.entity.AnnyRenderer;
+import jimenezli.neuro21.client.renderer.entity.IronCowRenderer;
+import jimenezli.neuro21.client.renderer.entity.NeurosamaRenderer;
+import jimenezli.neuro21.client.renderer.entity.VedalRenderer;
+import jimenezli.neuro21.util.NeurosamaType;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 

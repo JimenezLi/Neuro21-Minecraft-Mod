@@ -1,4 +1,4 @@
-package jimenezli.neuro21.entity;
+package jimenezli.neuro21.util;
 
 public enum NeurosamaType {
     NEUROSAMA,

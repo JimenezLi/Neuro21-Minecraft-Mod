@@ -1,3 +1,9 @@
+# 0.2.1
+## Features
+- Neuro-sama named "jeb_" or anything that includes "RGB" (case insensitive) will change color
+- Hiyori named "hiyori" (lower case) will change skin
+- Add sound effects (the sound effects become annoying when you add too many Neuro-sama in the world)
+
 # 0.2.0
 ## Features
 - Entities: Evil Neuro-sama, Hiyori

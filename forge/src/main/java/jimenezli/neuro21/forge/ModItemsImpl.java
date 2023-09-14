@@ -4,7 +4,7 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import jimenezli.neuro21.ModEntityTypes;
 import jimenezli.neuro21.Neuro21Mod;
-import jimenezli.neuro21.entity.NeurosamaType;
+import jimenezli.neuro21.util.NeurosamaType;
 import jimenezli.neuro21.handler.EntityHandler;
 import jimenezli.neuro21.handler.ItemHandler;
 import jimenezli.neuro21.item.HeartItem;
@@ -14,15 +14,9 @@ import net.minecraft.core.Registry;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SpawnEggItem;
 import net.minecraftforge.common.ForgeSpawnEggItem;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.function.Supplier;
-
-import static jimenezli.neuro21.Neuro21Mod.prefix;
 
 public class ModItemsImpl {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Neuro21Mod.MOD_ID, Registry.ITEM_REGISTRY);

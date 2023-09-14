@@ -1,12 +1,10 @@
 package jimenezli.neuro21.fabric;
 
-import jimenezli.neuro21.Neuro21Mod;
 import jimenezli.neuro21.entity.*;
 import jimenezli.neuro21.handler.EntityHandler;
+import jimenezli.neuro21.util.NeurosamaType;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.ResourceLocationException;
 import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 
 import static jimenezli.neuro21.Neuro21Mod.prefix;

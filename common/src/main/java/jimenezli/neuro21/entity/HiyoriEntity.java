@@ -1,5 +1,6 @@
 package jimenezli.neuro21.entity;
 
+import jimenezli.neuro21.util.NeurosamaType;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -11,6 +12,10 @@ public class HiyoriEntity extends NeurosamaEntity {
     public HiyoriEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
         this.neurosamaType = NeurosamaType.HIYORI;
+    }
+
+    public boolean isAbandoned() {
+        return this.hasCustomName() && this.getName().getString().equals("hiyori");
     }
 
     public static AttributeSupplier.Builder createAttributes() {

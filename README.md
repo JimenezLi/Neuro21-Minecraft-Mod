@@ -13,3 +13,5 @@ see [CHANGELOG.md](./CHANGELOG.md).
 ## Special Thanks
 
 This mod is based on [Architectury API](https://github.com/architectury/architectury-templates).
+
+Also, [UntitledDuckMod](https://github.com/Okabintaro/UntitledDuckMod) is a good example.

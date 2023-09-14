@@ -2,19 +2,25 @@ package jimenezli.neuro21.entity;
 
 import jimenezli.neuro21.ModEntityTypes;
 import jimenezli.neuro21.ModItems;
+import jimenezli.neuro21.ModSoundEvents;
 import jimenezli.neuro21.entity.ai.goal.NeurosamaFamilyHurtByTargetGoal;
+import jimenezli.neuro21.util.Neuro21SoundType;
+import jimenezli.neuro21.util.NeurosamaType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.animal.Fox;
 import net.minecraft.world.entity.animal.Turtle;
+import net.minecraft.world.entity.animal.frog.Frog;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -22,6 +28,8 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class NeurosamaEntity extends Animal {
     private int heartTime = this.random.nextInt(6000) + 6000;
@@ -60,14 +68,35 @@ public class NeurosamaEntity extends Animal {
 
     /**
      * Neurosama produces heart like chicken produces egg.
+     * Nearby chickens (ducks) and frogs will be put on Neuro-sama's head. But frog doesn't look good.
      */
     public void aiStep() {
         super.aiStep();
 
-        if (!this.level.isClientSide && this.isAlive() && !this.isBaby() && --this.heartTime <= 0) {
-            this.spawnAtLocation(ModItems.getHeartItem());
-            this.heartTime = this.random.nextInt(6000) + 6000;
+        if (!this.level.isClientSide && this.isAlive() && !this.isBaby()) {
+            if (--this.heartTime <= 0) {
+                this.playHeartSound();
+                this.spawnAtLocation(ModItems.getHeartItem());
+                this.heartTime = this.random.nextInt(6000) + 6000;
+            }
+            if (this.getPassengers().isEmpty()) {
+                List<Entity> nearbyEntities = this.level.getEntities(this, this.getBoundingBox().inflate(2.0, 1.0, 2.0));
+                for (Entity entity : nearbyEntities) {
+                    if ((entity instanceof Chicken || entity instanceof Frog) && entity.getVehicle() == null) {
+                        entity.startRiding(this);
+                        break;
+                    }
+                }
+            }
         }
+    }
+
+    public void playAmbientSound() {
+        this.playSound(ModSoundEvents.getNeurosamaSound(Neuro21SoundType.AMBIENT));
+    }
+
+    public void playHeartSound() {
+        this.playSound(ModSoundEvents.getNeurosamaSound(Neuro21SoundType.HEART));
     }
 
     public void readAdditionalSaveData(CompoundTag compoundTag) {
@@ -108,6 +137,10 @@ public class NeurosamaEntity extends Animal {
         } else {
             return this.isInLove() && animal.isInLove();
         }
+    }
+
+    public boolean isAbandoned() {
+        return false;
     }
 
     @Nullable

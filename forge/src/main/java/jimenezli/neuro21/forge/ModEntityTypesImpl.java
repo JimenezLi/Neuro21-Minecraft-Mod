@@ -5,13 +5,12 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import jimenezli.neuro21.Neuro21Mod;
 import jimenezli.neuro21.entity.*;
 import jimenezli.neuro21.handler.EntityHandler;
+import jimenezli.neuro21.util.NeurosamaType;
 import net.minecraft.core.Registry;
 import net.minecraft.world.entity.EntityType;
-import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.RegistryObject;
 
 @Mod.EventBusSubscriber(modid = Neuro21Mod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEntityTypesImpl {
