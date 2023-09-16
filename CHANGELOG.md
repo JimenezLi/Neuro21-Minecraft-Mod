@@ -1,5 +1,12 @@
+# 0.2.2
+## Features
+- Add music disc 1000年生きてる
+- Change sound files from stereo to mono, so that volume change with direction and distance
+> I recommend that you watch this artwork by 零悠: [【Neuro-sama/授权搬运】AI少女的存活千年 (Neuro's living millennium)【手书】](https://www.youtube.com/watch?v=yHY05a-N96A)
+
 # 0.2.1
 ## Features
+- Nearby chicken and frog will ride on Neuro-sama's head
 - Neuro-sama named "jeb_" or anything that includes "RGB" (case insensitive) will change color
 - Hiyori named "hiyori" (lower case) will change skin
 - Add sound effects (the sound effects become annoying when you add too many Neuro-sama in the world)

@@ -3,17 +3,12 @@ package jimenezli.neuro21.handler;
 import dev.architectury.registry.CreativeTabRegistry;
 import jimenezli.neuro21.ModItems;
 import jimenezli.neuro21.Neuro21Mod;
-import jimenezli.neuro21.item.ChipItem;
-import jimenezli.neuro21.item.HeartItem;
-import jimenezli.neuro21.item.IronmilkItem;
-import jimenezli.neuro21.item.UpgradeChipItem;
+import jimenezli.neuro21.item.*;
+import jimenezli.neuro21.item.disc.DiscLivingMillenniumItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SpawnEggItem;
+import net.minecraft.world.item.*;
 
 import java.util.function.Supplier;
 
@@ -27,7 +22,7 @@ public class ItemHandler {
         return new Item.Properties().tab(NEURO21);
     }
 
-    public static Supplier<SpawnEggItem> spawnEggSupplierBuilder(EntityType<? extends Mob> type, int primaryColor, int secondaryColor) {
+    public static Supplier<SpawnEggItem> SpawnEggSupplierBuilder(EntityType<? extends Mob> type, int primaryColor, int secondaryColor) {
         return () -> new SpawnEggItem(type, primaryColor, secondaryColor, defaultBuilder());
     }
 
@@ -42,4 +37,6 @@ public class ItemHandler {
 
     public static final String UPGRADE_CHIP_NAME = "upgrade_chip";
     public static final Supplier<UpgradeChipItem> UPGRADE_CHIP_ITEM = UpgradeChipItem::new;
+
+    public static final Supplier<RecordItem> DISC_LIVING_MILLENNIUM_ITEM = DiscLivingMillenniumItem::new;
 }

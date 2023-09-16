@@ -1,6 +1,7 @@
 package jimenezli.neuro21.forge;
 
 import jimenezli.neuro21.handler.SoundHandler;
+import jimenezli.neuro21.util.Neuro21DiscType;
 import jimenezli.neuro21.util.Neuro21SoundType;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -13,6 +14,7 @@ public class ModSoundEventsImpl {
     public static final SoundEvent NEUROSAMA_AMBIENT = new SoundEvent(SoundHandler.NEUROSAMA_AMBIENT);
     public static final SoundEvent NEUROSAMA_HEART = new SoundEvent(SoundHandler.NEUROSAMA_HEART);
     public static final SoundEvent EVIL_NEUROSAMA_AMBIENT = new SoundEvent(SoundHandler.EVIL_NEUROSAMA_AMBIENT);
+    public static final SoundEvent DISC_LIVING_MILLENNIUM = new SoundEvent(SoundHandler.Disc(SoundHandler.DISC_LIVING_MILLENNIUM));
 
     @SubscribeEvent
     public static void registerSoundEvents(RegisterEvent event) {
@@ -26,6 +28,7 @@ public class ModSoundEventsImpl {
             registry.register(SoundHandler.NEUROSAMA_AMBIENT, NEUROSAMA_AMBIENT);
             registry.register(SoundHandler.NEUROSAMA_HEART, NEUROSAMA_HEART);
             registry.register(SoundHandler.EVIL_NEUROSAMA_AMBIENT, EVIL_NEUROSAMA_AMBIENT);
+            registry.register(SoundHandler.Disc(SoundHandler.DISC_LIVING_MILLENNIUM), DISC_LIVING_MILLENNIUM);
         });
     }
 
@@ -35,5 +38,9 @@ public class ModSoundEventsImpl {
 
     public static SoundEvent getEvilNeurosamaSound(Neuro21SoundType type) {
         return EVIL_NEUROSAMA_AMBIENT;
+    }
+
+    public static SoundEvent getDiscSound(Neuro21DiscType type) {
+        return DISC_LIVING_MILLENNIUM;
     }
 }

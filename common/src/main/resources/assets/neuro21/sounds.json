@@ -19,5 +19,10 @@
       "neuro21:evil_neurosama_ambient_2"
     ],
     "subtitle": "subtitles.neuro21.evil_neurosama_ambient"
+  },
+  "music_disc.living_millennium":{
+    "sounds": [
+      "neuro21:disc_living_millennium"
+    ]
   }
 }

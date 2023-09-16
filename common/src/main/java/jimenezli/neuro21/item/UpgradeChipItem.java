@@ -2,6 +2,7 @@ package jimenezli.neuro21.item;
 
 import jimenezli.neuro21.ModEntityTypes;
 import jimenezli.neuro21.handler.ItemHandler;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.world.InteractionHand;
@@ -49,6 +50,6 @@ public class UpgradeChipItem extends Item {
     }
 
     public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> list, TooltipFlag tooltipFlag) {
-        list.add(Component.translatable("item.neuro21.upgrade_chip.description"));
+        list.add(Component.translatable("item.neuro21.upgrade_chip.desc").withStyle(ChatFormatting.GRAY));
     }
 }

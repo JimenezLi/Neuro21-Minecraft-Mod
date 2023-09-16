@@ -9,6 +9,8 @@ import jimenezli.neuro21.util.NeurosamaType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -75,7 +77,7 @@ public class NeurosamaEntity extends Animal {
 
         if (!this.level.isClientSide && this.isAlive() && !this.isBaby()) {
             if (--this.heartTime <= 0) {
-                this.playHeartSound();
+                this.playSound(this.getHeartSound(), 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
                 this.spawnAtLocation(ModItems.getHeartItem());
                 this.heartTime = this.random.nextInt(6000) + 6000;
             }
@@ -91,12 +93,12 @@ public class NeurosamaEntity extends Animal {
         }
     }
 
-    public void playAmbientSound() {
-        this.playSound(ModSoundEvents.getNeurosamaSound(Neuro21SoundType.AMBIENT));
+    protected SoundEvent getAmbientSound() {
+        return ModSoundEvents.getNeurosamaSound(Neuro21SoundType.AMBIENT);
     }
 
-    public void playHeartSound() {
-        this.playSound(ModSoundEvents.getNeurosamaSound(Neuro21SoundType.HEART));
+    protected SoundEvent getHeartSound() {
+        return ModSoundEvents.getNeurosamaSound(Neuro21SoundType.HEART);
     }
 
     public void readAdditionalSaveData(CompoundTag compoundTag) {

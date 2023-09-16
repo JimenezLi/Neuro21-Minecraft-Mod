@@ -3,6 +3,7 @@ package jimenezli.neuro21.entity;
 import jimenezli.neuro21.ModSoundEvents;
 import jimenezli.neuro21.util.Neuro21SoundType;
 import jimenezli.neuro21.util.NeurosamaType;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -16,8 +17,9 @@ public class EvilNeurosamaEntity extends NeurosamaEntity{
         this.neurosamaType = NeurosamaType.EVIL_NEUROSAMA;
     }
 
-    public void playAmbientSound() {
-        this.playSound(ModSoundEvents.getEvilNeurosamaSound(Neuro21SoundType.AMBIENT));
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return ModSoundEvents.getEvilNeurosamaSound(Neuro21SoundType.AMBIENT);
     }
 
     @Override

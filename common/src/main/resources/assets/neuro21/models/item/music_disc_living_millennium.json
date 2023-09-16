@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "neuro21:item/music_disc_living_millennium"
+  }
+}
