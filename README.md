@@ -14,4 +14,6 @@ see [CHANGELOG.md](./CHANGELOG.md).
 
 This mod is based on [Architectury API](https://github.com/architectury/architectury-templates).
 
-Also, [UntitledDuckMod](https://github.com/Okabintaro/UntitledDuckMod) is a good example.
+[UntitledDuckMod](https://github.com/Okabintaro/UntitledDuckMod) is an example, but it has too many deprecated code.
+
+[CoralReef](https://github.com/primetoxinz/CoralReef) is a better example.
