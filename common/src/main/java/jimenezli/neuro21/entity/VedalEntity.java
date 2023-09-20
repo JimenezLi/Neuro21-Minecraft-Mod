@@ -1,8 +1,7 @@
 package jimenezli.neuro21.entity;
 
-import jimenezli.neuro21.ModEntityTypes;
-import jimenezli.neuro21.ModItems;
 import jimenezli.neuro21.entity.ai.goal.NeurosamaFamilyHurtByTargetGoal;
+import jimenezli.neuro21.handler.ItemHandler;
 import jimenezli.neuro21.util.NeurosamaType;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
@@ -47,7 +46,7 @@ public class VedalEntity extends Turtle {
     }
 
     public boolean isFood(ItemStack itemStack) {
-        return super.isFood(itemStack) || itemStack.getItem() == ModItems.getHeartItem();
+        return super.isFood(itemStack) || itemStack.getItem() == ItemHandler.HEART.get();
     }
 
     public boolean canMate(Animal animal) {
@@ -60,6 +59,6 @@ public class VedalEntity extends Turtle {
 
     public NeurosamaEntity getBreedOffspring(ServerLevel world, AgeableMob ageable) {
         NeurosamaType type = (this.random.nextDouble() < 0.9) ? NeurosamaType.NEUROSAMA : NeurosamaType.EVIL_NEUROSAMA;
-        return ModEntityTypes.getNeurosamaEntity(type).create(world);
+        return NeurosamaType.getNeurosama(type).create(world);
     }
 }

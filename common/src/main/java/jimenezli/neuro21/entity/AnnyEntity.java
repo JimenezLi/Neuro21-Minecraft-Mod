@@ -1,8 +1,7 @@
 package jimenezli.neuro21.entity;
 
-import jimenezli.neuro21.ModEntityTypes;
-import jimenezli.neuro21.ModItems;
 import jimenezli.neuro21.entity.ai.goal.NeurosamaFamilyHurtByTargetGoal;
+import jimenezli.neuro21.handler.ItemHandler;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
@@ -11,8 +10,6 @@ import net.minecraft.world.entity.ai.goal.BreedGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.Fox;
-import net.minecraft.world.entity.animal.Turtle;
-import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
@@ -47,7 +44,7 @@ public class AnnyEntity extends Fox {
     }
 
     public boolean isFood(ItemStack itemStack) {
-        return super.isFood(itemStack) || itemStack.getItem() == ModItems.getHeartItem();
+        return super.isFood(itemStack) || itemStack.getItem() == ItemHandler.HEART.get();
     }
 
     public boolean canMate(Animal animal) {

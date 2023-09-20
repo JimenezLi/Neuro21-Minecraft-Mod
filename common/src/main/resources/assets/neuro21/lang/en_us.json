@@ -6,12 +6,15 @@
   "entity.neuro21.anny": "Anny",
   "entity.neuro21.iron_cow": "Iron Cow",
 
+  "block.neuro21.chinese_cabbage_block": "Chinese Cabbages",
+
   "item.neuro21.heart": "Heart",
   "item.neuro21.ironmilk": "Iron Milk",
   "item.neuro21.chip": "Chip",
   "item.neuro21.chip.desc": "Basic chip used to craft upgrade chip",
   "item.neuro21.upgrade_chip": "Upgrade Chip",
   "item.neuro21.upgrade_chip.desc": "Try using it on turtle, fox and cow",
+  "item.neuro21.chinese_cabbage": "Chinese Cabbage",
   "item.neuro21.neurosama_spawn_egg": "Neuro-sama Spawn Egg",
   "item.neuro21.evil_neurosama_spawn_egg": "Evil Neuro-sama Spawn Egg",
   "item.neuro21.hiyori_spawn_egg": "Hiyori Spawn Egg",

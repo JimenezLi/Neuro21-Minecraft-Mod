@@ -1,7 +1,7 @@
 package jimenezli.neuro21.entity;
 
-import jimenezli.neuro21.ModItems;
 import jimenezli.neuro21.entity.ai.goal.NeurosamaFamilyHurtByTargetGoal;
+import jimenezli.neuro21.handler.ItemHandler;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
@@ -51,7 +51,7 @@ public class IronCowEntity extends Cow {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         if (itemStack.is(Items.BUCKET) && !this.isBaby()) {
             player.playSound(SoundEvents.COW_MILK, 1.0F, 1.0F);
-            ItemStack itemStack2 = ItemUtils.createFilledResult(itemStack, player, new ItemStack(ModItems.getIronmilkItem()));
+            ItemStack itemStack2 = ItemUtils.createFilledResult(itemStack, player, new ItemStack(ItemHandler.IRONMILK.get()));
             player.setItemInHand(interactionHand, itemStack2);
             return InteractionResult.sidedSuccess(this.level.isClientSide);
         } else {

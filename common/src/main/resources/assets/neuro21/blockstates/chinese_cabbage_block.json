@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "neuro21:block/chinese_cabbage_block_stage0"
+    },
+    "age=1": {
+      "model": "neuro21:block/chinese_cabbage_block_stage0"
+    },
+    "age=2": {
+      "model": "neuro21:block/chinese_cabbage_block_stage1"
+    },
+    "age=3": {
+      "model": "neuro21:block/chinese_cabbage_block_stage1"
+    },
+    "age=4": {
+      "model": "neuro21:block/chinese_cabbage_block_stage2"
+    },
+    "age=5": {
+      "model": "neuro21:block/chinese_cabbage_block_stage2"
+    },
+    "age=6": {
+      "model": "neuro21:block/chinese_cabbage_block_stage2"
+    },
+    "age=7": {
+      "model": "neuro21:block/chinese_cabbage_block_stage3"
+    }
+  }
+}

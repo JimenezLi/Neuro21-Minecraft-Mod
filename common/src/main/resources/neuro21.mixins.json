@@ -7,6 +7,9 @@
     "TitleScreenMixin"
   ],
   "mixins": [
+    "ChineseCabbageIsPigFoodMixin",
+    "SkeletonLootMixin",
+    "ZombieLootMixin"
   ],
   "injectors": {
     "defaultRequire": 1

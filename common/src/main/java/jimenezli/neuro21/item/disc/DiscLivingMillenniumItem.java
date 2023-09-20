@@ -1,7 +1,6 @@
 package jimenezli.neuro21.item.disc;
 
-import jimenezli.neuro21.ModSoundEvents;
-import jimenezli.neuro21.util.Neuro21DiscType;
+import jimenezli.neuro21.handler.SoundHandler;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -19,7 +18,7 @@ public class DiscLivingMillenniumItem extends RecordItem {
     public DiscLivingMillenniumItem() {
         super(
                 0,
-                ModSoundEvents.getDiscSound(Neuro21DiscType.LIVING_MILLENNIUM),
+                SoundHandler.DISC.getOrNull(),
                 defaultBuilder().stacksTo(1).rarity(RARE),
                 188
         );

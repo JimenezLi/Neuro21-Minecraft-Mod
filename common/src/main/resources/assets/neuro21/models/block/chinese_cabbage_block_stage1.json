@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "neuro21:block/chinese_cabbage_block_stage1"
+  }
+}

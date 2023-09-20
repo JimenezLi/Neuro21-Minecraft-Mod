@@ -1,16 +1,13 @@
 package jimenezli.neuro21.entity;
 
-import jimenezli.neuro21.ModEntityTypes;
-import jimenezli.neuro21.ModItems;
-import jimenezli.neuro21.ModSoundEvents;
 import jimenezli.neuro21.entity.ai.goal.NeurosamaFamilyHurtByTargetGoal;
-import jimenezli.neuro21.util.Neuro21SoundType;
+import jimenezli.neuro21.handler.ItemHandler;
+import jimenezli.neuro21.handler.SoundHandler;
 import jimenezli.neuro21.util.NeurosamaType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -78,7 +75,7 @@ public class NeurosamaEntity extends Animal {
         if (!this.level.isClientSide && this.isAlive() && !this.isBaby()) {
             if (--this.heartTime <= 0) {
                 this.playSound(this.getHeartSound(), 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
-                this.spawnAtLocation(ModItems.getHeartItem());
+                this.spawnAtLocation(ItemHandler.HEART.get());
                 this.heartTime = this.random.nextInt(6000) + 6000;
             }
             if (this.getPassengers().isEmpty()) {
@@ -94,11 +91,11 @@ public class NeurosamaEntity extends Animal {
     }
 
     protected SoundEvent getAmbientSound() {
-        return ModSoundEvents.getNeurosamaSound(Neuro21SoundType.AMBIENT);
+        return SoundHandler.NEUROSAMA_AMBIENT.getOrNull();
     }
 
     protected SoundEvent getHeartSound() {
-        return ModSoundEvents.getNeurosamaSound(Neuro21SoundType.HEART);
+        return SoundHandler.NEUROSAMA_HEART.getOrNull();
     }
 
     public void readAdditionalSaveData(CompoundTag compoundTag) {
@@ -128,7 +125,7 @@ public class NeurosamaEntity extends Animal {
     }
 
     public boolean isFood(ItemStack itemStack) {
-        return itemStack.getItem() == ModItems.getHeartItem();
+        return itemStack.getItem() == ItemHandler.HEART.get();
     }
 
     public boolean canMate(Animal animal) {
@@ -158,7 +155,7 @@ public class NeurosamaEntity extends Animal {
                 }
             }
         }
-        return ModEntityTypes.getNeurosamaEntity(type).create(serverLevel);
+        return NeurosamaType.getNeurosama(type).create(serverLevel);
     }
 
     /**

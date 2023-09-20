@@ -6,12 +6,15 @@
   "entity.neuro21.anny": "Anny",
   "entity.neuro21.iron_cow": "铁牛",
 
+  "block.neuro21.chinese_cabbage_block": "白菜",
+
   "item.neuro21.heart": "爱心",
   "item.neuro21.ironmilk": "铁牛奶",
   "item.neuro21.chip": "芯片",
   "item.neuro21.chip.desc": "基础芯片，用于合成升级芯片",
   "item.neuro21.upgrade_chip": "升级芯片",
   "item.neuro21.upgrade_chip.desc": "可用于：乌龟，狐狸，牛",
+  "item.neuro21.chinese_cabbage": "白菜",
   "item.neuro21.neurosama_spawn_egg": "Neuro-sama刷怪蛋",
   "item.neuro21.evil_neurosama_spawn_egg": "Evil Neuro-sama刷怪蛋",
   "item.neuro21.hiyori_spawn_egg": "Hiyori刷怪蛋",

@@ -1,10 +1,9 @@
 package jimenezli.neuro21.item;
 
-import jimenezli.neuro21.ModEntityTypes;
+import jimenezli.neuro21.handler.EntityHandler;
 import jimenezli.neuro21.handler.ItemHandler;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
@@ -28,19 +27,19 @@ public class UpgradeChipItem extends Item {
     public InteractionResult interactLivingEntity(ItemStack itemStack, Player player, LivingEntity livingEntity, InteractionHand interactionHand) {
         if (livingEntity.getClass() == Turtle.class) {
             if (!player.level.isClientSide && livingEntity.isAlive()) {
-                ((Turtle) livingEntity).convertTo(ModEntityTypes.getVedalEntity(), true);
+                ((Turtle) livingEntity).convertTo(EntityHandler.VEDAL.get(), true);
                 itemStack.shrink(1);
             }
             return InteractionResult.sidedSuccess(player.level.isClientSide);
         } else if (livingEntity.getClass() == Fox.class) {
             if (!player.level.isClientSide && livingEntity.isAlive()) {
-                ((Fox) livingEntity).convertTo(ModEntityTypes.getAnnyEntity(), true);
+                ((Fox) livingEntity).convertTo(EntityHandler.ANNY.get(), true);
                 itemStack.shrink(1);
             }
             return InteractionResult.sidedSuccess(player.level.isClientSide);
         } else if (livingEntity.getClass() == Cow.class) {
             if (!player.level.isClientSide && livingEntity.isAlive()) {
-                ((Cow) livingEntity).convertTo(ModEntityTypes.getIronCowEntity(), true);
+                ((Cow) livingEntity).convertTo(EntityHandler.IRON_COW.get(), true);
                 itemStack.shrink(1);
             }
             return InteractionResult.sidedSuccess(player.level.isClientSide);

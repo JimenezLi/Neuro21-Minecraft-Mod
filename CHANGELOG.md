@@ -1,7 +1,13 @@
+# 0.2.3
+## Features
+- Refactor code
+- The music disc has 10% chance to drop when creeper kills skeleton (Other discs drop when skeleton kills creeper, this is creeper's revenge)
+- Add cabbage crop
+
 # 0.2.2
 ## Features
-- Add music disc 1000年生きてる
-- Change sound files from stereo to mono, so that volume change with direction and distance
+- Add music disc 1000年生きてる, but creative mode only
+- Change sound files from stereo to mono, so that volume changes with direction and distance
 > I recommend that you watch this artwork by 零悠: [【Neuro-sama/授权搬运】AI少女的存活千年 (Neuro's living millennium)【手书】](https://www.youtube.com/watch?v=yHY05a-N96A)
 
 # 0.2.1
