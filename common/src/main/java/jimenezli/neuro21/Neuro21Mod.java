@@ -20,7 +20,7 @@ public class Neuro21Mod {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(MOD_ID, Registry.ENTITY_TYPE_REGISTRY);
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(MOD_ID, Registry.SOUND_EVENT_REGISTRY);
 
-    public static void init() {
+    public static void preInit() {
         SoundHandler.register();
         EntityHandler.register();
         BlockHandler.register();

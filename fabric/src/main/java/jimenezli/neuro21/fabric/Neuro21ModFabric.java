@@ -6,6 +6,6 @@ import net.fabricmc.api.ModInitializer;
 public class Neuro21ModFabric implements ModInitializer {
     @Override
     public void onInitialize() {
-        Neuro21Mod.init();
+        Neuro21Mod.preInit();
     }
 }
