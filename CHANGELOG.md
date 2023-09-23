@@ -1,3 +1,8 @@
+# 0.2.4
+## Features
+- [Neuro-sama's house](https://cdn.discordapp.com/attachments/1072697081443131476/1153341266331975760/image.png) can generate in the world
+- Anny becomes immune to negative effects once she recovers from it
+
 # 0.2.3
 ## Features
 - Refactor code
