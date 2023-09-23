@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "neuro21:neuro_house",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 8,
+    "separation": 5,
+    "salt": 572943
+  }
+}
