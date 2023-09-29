@@ -49,5 +49,7 @@ public class ItemHandler {
         registerSpawnEgg(EntityNames.EVIL_NEUROSAMA, ModRegistries.SpawnEggSupplierBuilder(EntityHandler.EVIL_NEUROSAMA, 0x352e25, 0xd2b098));
         registerSpawnEgg(EntityNames.HIYORI, ModRegistries.SpawnEggSupplierBuilder(EntityHandler.HIYORI, 0xfff2d8, 0x9f8b7c));
         registerSpawnEgg(EntityNames.IRON_COW, ModRegistries.SpawnEggSupplierBuilder(EntityHandler.IRON_COW, 0xe9e9e9, 0xc4c4c4));
+        registerSpawnEgg(EntityNames.GYMBAG, ModRegistries.SpawnEggSupplierBuilder(EntityHandler.GYMBAG, 0x7a5052, 0xb4686c));
+        registerSpawnEgg(EntityNames.SWARM_DRONE, ModRegistries.SpawnEggSupplierBuilder(EntityHandler.SWARM_DRONE, 0xffffff, 0xe4e4e4));
     }
 }

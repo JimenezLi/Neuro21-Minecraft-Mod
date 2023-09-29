@@ -5,6 +5,10 @@
   "entity.neuro21.vedal": "Vedal",
   "entity.neuro21.anny": "Anny",
   "entity.neuro21.iron_cow": "铁牛",
+  "entity.neuro21.iron_cow.cooldown": "该铁牛正在冷却，请等待%s分钟！",
+  "entity.neuro21.hiyori_boss": "Boss Hiyori",
+  "entity.neuro21.gymbag": "Gymbag",
+  "entity.neuro21.swarm_drone": "蜂群无人机",
 
   "block.neuro21.chinese_cabbage_block": "白菜",
 
@@ -21,6 +25,8 @@
   "item.neuro21.vedal_spawn_egg": "Vedal刷怪蛋",
   "item.neuro21.anny_spawn_egg": "Anny刷怪蛋",
   "item.neuro21.iron_cow_spawn_egg": "铁牛刷怪蛋",
+  "item.neuro21.gymbag_spawn_egg": "Gymbag刷怪蛋",
+  "item.neuro21.swarm_drone_spawn_egg": "蜂群无人机刷怪蛋",
   "item.neuro21.music_disc_living_millennium": "音乐唱片",
   "item.neuro21.music_disc_living_millennium.desc": "Neuro-sama - 1000年生きてる",
   "item.neuro21.music_disc_living_millennium.desc1": "原曲作者：いよわ/初音ミク",
@@ -30,5 +36,8 @@
 
   "subtitles.neuro21.neurosama_ambient": "Neuro-sama：说话",
   "subtitles.neuro21.neurosama_heart": "Neuro-sama：产出爱心",
-  "subtitles.neuro21.evil_neurosama_ambient": "Evil Neuro-sama：说话"
+  "subtitles.neuro21.evil_neurosama_ambient": "Evil Neuro-sama：说话",
+
+  "advancements.neuro21.summon_hiyori_boss.title": "I don't want to be an engineer...",
+  "advancements.neuro21.summon_hiyori_boss.description": "召唤Hiyori Boss"
 }

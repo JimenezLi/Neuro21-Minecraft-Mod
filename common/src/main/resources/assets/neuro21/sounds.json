@@ -24,5 +24,20 @@
     "sounds": [
       "neuro21:disc_living_millennium"
     ]
+  },
+  "explosion": {
+    "sounds": [
+      "neuro21:explosion"
+    ]
+  },
+  "hiyori_boss_swarm": {
+    "sounds": [
+      "neuro21:hiyori_boss_swarm"
+    ]
+  },
+  "hiyori_boss_gymbag": {
+    "sounds": [
+      "neuro21:hiyori_boss_gymbag"
+    ]
   }
 }

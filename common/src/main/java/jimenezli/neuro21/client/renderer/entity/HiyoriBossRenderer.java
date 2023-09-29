@@ -6,7 +6,6 @@ import jimenezli.neuro21.entity.boss.hiyori.HiyoriBossEntity;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.model.geom.ModelLayers;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
@@ -27,10 +26,6 @@ public class HiyoriBossRenderer extends HumanoidMobRenderer<HiyoriBossEntity, Pl
     protected void scale(HiyoriBossEntity livingEntity, PoseStack poseStack, float f) {
         super.scale(livingEntity, poseStack, f);
         poseStack.scale(hiyoriBossScale, hiyoriBossScale, hiyoriBossScale);
-    }
-
-    public void render(HiyoriBossEntity hiyoriBoss, float f, float g, PoseStack poseStack, MultiBufferSource multiBufferSource, int i) {
-        super.render(hiyoriBoss, f, g, poseStack, multiBufferSource, i);
     }
 
     public ResourceLocation getTextureLocation(HiyoriBossEntity hiyoriBoss) {

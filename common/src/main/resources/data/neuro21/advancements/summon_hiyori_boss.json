@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:adventure/throw_trident",
+  "criteria": {
+    "struck_hiyori": {
+      "conditions": {
+        "victims": [
+          [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "neuro21:hiyori"
+              }
+            }
+          ]
+        ]
+      },
+      "trigger": "minecraft:channeled_lightning"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.neuro21.summon_hiyori_boss.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "neuro21:heart"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.neuro21.summon_hiyori_boss.title"
+    }
+  },
+  "requirements": [
+    [
+      "struck_hiyori"
+    ]
+  ]
+}

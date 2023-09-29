@@ -1,3 +1,8 @@
+# 0.3.0
+## Features
+- Add **Hiyori Boss**, which can be summoned by striking Hiyori with lightning. Hiyori Boss has 3 ultimate moves: summon **Swarm Drones**, summon **Gymbags**, and summon lightning bolts.
+- Iron Cow has cooldown of 5 minutes, because Iron Milk is too overpowered. 
+
 # 0.2.4
 ## Features
 - [Neuro-sama's house](https://cdn.discordapp.com/attachments/1072697081443131476/1153341266331975760/image.png) can generate in the world

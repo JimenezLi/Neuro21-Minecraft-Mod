@@ -68,19 +68,14 @@ public class EntityHandler {
     public static final RegistrySupplier<EntityType<GymbagEntity>> GYMBAG = registerLivingEntity(
             EntityNames.GYMBAG,
             EntityType.Builder.of(GymbagEntity::new, MobCategory.MONSTER).sized(1.0F,  1.0F),
-            Creeper::createAttributes
+            GymbagEntity::createAttributes
     );
 
     public static final RegistrySupplier<EntityType<SwarmDroneEntity>> SWARM_DRONE = registerLivingEntity(
             EntityNames.SWARM_DRONE,
             EntityType.Builder.of(SwarmDroneEntity::new, MobCategory.MONSTER).sized(1.0F, 1.0F),
-            Bee::createAttributes
+            SwarmDroneEntity::createAttributes
     );
-
-//    private static <T extends Entity> RegistrySupplier<EntityType<T>> registerEntity(String name, EntityType.Builder<T> builder) {
-//        ResourceLocation id = prefix(name);
-//        return ENTITY_TYPES.register(id, () -> builder.build(id.toString()));
-//    }
 
     private static <T extends LivingEntity> RegistrySupplier<EntityType<T>> registerLivingEntity(String name, EntityType.Builder<T> builder, Supplier<AttributeSupplier.Builder> attributeSupplier) {
         ResourceLocation id = prefix(name);

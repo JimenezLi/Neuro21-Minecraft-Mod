@@ -5,6 +5,10 @@
   "entity.neuro21.vedal": "Vedal",
   "entity.neuro21.anny": "Anny",
   "entity.neuro21.iron_cow": "Iron Cow",
+  "entity.neuro21.iron_cow.cooldown": "This iron cow is on cooldown, please wait %s minute(s)!",
+  "entity.neuro21.hiyori_boss": "Boss Hiyori",
+  "entity.neuro21.gymbag": "Gymbag",
+  "entity.neuro21.swarm_drone": "Swarm Drone",
 
   "block.neuro21.chinese_cabbage_block": "Chinese Cabbages",
 
@@ -21,6 +25,8 @@
   "item.neuro21.vedal_spawn_egg": "Vedal Spawn Egg",
   "item.neuro21.anny_spawn_egg": "Anny Spawn Egg",
   "item.neuro21.iron_cow_spawn_egg": "Iron Cow Spawn Egg",
+  "item.neuro21.gymbag_spawn_egg": "Gymbag Spawn Egg",
+  "item.neuro21.swarm_drone_spawn_egg": "Swarm Drone Spawn Egg",
   "item.neuro21.music_disc_living_millennium": "Music Disc",
   "item.neuro21.music_disc_living_millennium.desc": "Neuro-sama - 1000年生きてる",
   "item.neuro21.music_disc_living_millennium.desc1": "Original by いよわ/初音ミク",
@@ -30,5 +36,8 @@
 
   "subtitles.neuro21.neurosama_ambient": "Neuro-sama talks",
   "subtitles.neuro21.neurosama_heart": "Neuro-sama produces heart",
-  "subtitles.neuro21.evil_neurosama_ambient": "Evil Neuro-sama talks"
+  "subtitles.neuro21.evil_neurosama_ambient": "Evil Neuro-sama talks",
+
+  "advancements.neuro21.summon_hiyori_boss.title": "I don't want to be an engineer...",
+  "advancements.neuro21.summon_hiyori_boss.description": "Summon Hiyori Boss"
 }
