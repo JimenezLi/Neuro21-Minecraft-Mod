@@ -12,8 +12,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.animal.Bee;
-import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.function.Supplier;
@@ -27,6 +25,18 @@ public class EntityHandler {
             EntityNames.VEDAL,
             EntityType.Builder.of(VedalEntity::new, MobCategory.CREATURE).sized(1.2F, 0.4F).clientTrackingRange(10),
             VedalEntity::createAttributes
+    );
+
+    public static final Supplier<EntityType<GigaVedalEntity>> GIGA_VEDAL = registerLivingEntity(
+            EntityNames.GIGA_VEDAL,
+            EntityType.Builder.of(GigaVedalEntity::new, MobCategory.CREATURE),
+            GigaVedalEntity::createAttributes
+    );
+
+    public static final Supplier<EntityType<MiyuneEntity>> MIYUNE = registerLivingEntity(
+            EntityNames.MIYUNE,
+            EntityType.Builder.of(MiyuneEntity::new, MobCategory.CREATURE),
+            MiyuneEntity::createAttributes
     );
 
     public static final Supplier<EntityType<AnnyEntity>> ANNY = registerLivingEntity(
@@ -51,12 +61,6 @@ public class EntityHandler {
             EntityNames.HIYORI,
             EntityType.Builder.of(HiyoriEntity::new, MobCategory.CREATURE),
             HiyoriEntity::createAttributes
-    );
-
-    public static final RegistrySupplier<EntityType<IronCowEntity>> IRON_COW = registerLivingEntity(
-            EntityNames.IRON_COW,
-            EntityType.Builder.of(IronCowEntity::new, MobCategory.CREATURE).sized(0.9F, 1.4F).clientTrackingRange(10),
-            IronCowEntity::createAttributes
     );
 
     public static final RegistrySupplier<EntityType<HiyoriBossEntity>> HIYORI_BOSS = registerLivingEntity(

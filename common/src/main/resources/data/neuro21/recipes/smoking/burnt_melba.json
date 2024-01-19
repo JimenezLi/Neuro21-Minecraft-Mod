@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "neuro21:melba_toast"
+  },
+  "result": "neuro21:burnt_melba",
+  "experience": 0.35,
+  "cookingtime": 100
+}

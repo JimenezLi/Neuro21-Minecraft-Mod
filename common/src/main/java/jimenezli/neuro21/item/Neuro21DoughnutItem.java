@@ -9,19 +9,19 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class HeartItem extends Item {
+public class Neuro21DoughnutItem extends Item {
     public static final FoodProperties HEART_FOOD = (new FoodProperties.Builder())
             .nutrition(1)
             .saturationMod(0.1F)
             .alwaysEat()
             .build();
 
-    public HeartItem() {
+    public Neuro21DoughnutItem() {
         super(ItemHandler.defaultBuilder().food(HEART_FOOD));
     }
 
     /**
-     * When the heart is consumed, it levels up player's current absorption effect (max level is 5).
+     * When consumed, it levels up player's current absorption effect (max level is 5).
      * Isn't it too overpowered?
      */
     public ItemStack finishUsingItem(ItemStack itemStack, Level level, LivingEntity livingEntity) {

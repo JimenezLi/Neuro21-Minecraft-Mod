@@ -18,11 +18,12 @@ public class Neuro21ModClient {
         EntityModelLayerRegistry.register(Neuro21ModelLayers.SWARM_DRONE, SwarmDroneModel::createBodyLayer);
 
         EntityRendererRegistry.register(EntityHandler.VEDAL, VedalRenderer::new);
+        EntityRendererRegistry.register(EntityHandler.GIGA_VEDAL, GigaVedalRenderer::new);
+        EntityRendererRegistry.register(EntityHandler.MIYUNE, MiyuneRenderer::new);
         EntityRendererRegistry.register(EntityHandler.ANNY, AnnyRenderer::new);
         EntityRendererRegistry.register(EntityHandler.NEUROSAMA, NeurosamaRenderer::new);
         EntityRendererRegistry.register(EntityHandler.EVIL_NEUROSAMA, NeurosamaRenderer::new);
         EntityRendererRegistry.register(EntityHandler.HIYORI, NeurosamaRenderer::new);
-        EntityRendererRegistry.register(EntityHandler.IRON_COW, IronCowRenderer::new);
         EntityRendererRegistry.register(EntityHandler.HIYORI_BOSS, HiyoriBossRenderer::new);
         EntityRendererRegistry.register(EntityHandler.GYMBAG, GymbagRenderer::new);
         EntityRendererRegistry.register(EntityHandler.SWARM_DRONE, SwarmDroneRenderer::new);

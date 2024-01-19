@@ -114,7 +114,7 @@ public class AnnyEntity extends Fox {
     }
 
     public boolean canMate(Animal animal) {
-        if (animal.getClass() != VedalEntity.class) {
+        if (!(animal instanceof VedalEntity)) {
             return false;
         } else {
             return this.isInLove() && animal.isInLove();

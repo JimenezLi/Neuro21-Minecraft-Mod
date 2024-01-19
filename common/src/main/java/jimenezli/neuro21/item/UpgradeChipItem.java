@@ -38,11 +38,8 @@ public class UpgradeChipItem extends Item {
             }
             return InteractionResult.sidedSuccess(player.level.isClientSide);
         } else if (livingEntity.getClass() == Cow.class) {
-            if (!player.level.isClientSide && livingEntity.isAlive()) {
-                ((Cow) livingEntity).convertTo(EntityHandler.IRON_COW.get(), true);
-                itemStack.shrink(1);
-            }
-            return InteractionResult.sidedSuccess(player.level.isClientSide);
+            player.displayClientMessage(Component.translatable("entity.neuro21.iron_cow.pass"), true);
+            return InteractionResult.PASS;
         } else {
             return InteractionResult.PASS;
         }

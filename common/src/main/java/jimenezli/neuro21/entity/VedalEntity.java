@@ -1,11 +1,16 @@
 package jimenezli.neuro21.entity;
 
 import jimenezli.neuro21.entity.ai.goal.NeurosamaFamilyHurtByTargetGoal;
+import jimenezli.neuro21.entity.boss.hiyori.HiyoriBossEntity;
+import jimenezli.neuro21.handler.EntityHandler;
 import jimenezli.neuro21.handler.ItemHandler;
 import jimenezli.neuro21.util.NeurosamaType;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.BreedGoal;
@@ -50,7 +55,7 @@ public class VedalEntity extends Turtle {
     }
 
     public boolean canMate(Animal animal) {
-        if (animal.getClass() != AnnyEntity.class) {
+        if (!(animal instanceof AnnyEntity)) {
             return false;
         } else {
             return this.isInLove() && animal.isInLove();
@@ -60,5 +65,24 @@ public class VedalEntity extends Turtle {
     public NeurosamaEntity getBreedOffspring(ServerLevel world, AgeableMob ageable) {
         NeurosamaType type = (this.random.nextDouble() < 0.9) ? NeurosamaType.NEUROSAMA : NeurosamaType.EVIL_NEUROSAMA;
         return NeurosamaType.getNeurosama(type).create(world);
+    }
+
+    public void thunderHit(ServerLevel serverLevel, LightningBolt lightningBolt) {
+        if (this.getClass() == VedalEntity.class) {
+            GigaVedalEntity gigaVedal = EntityHandler.GIGA_VEDAL.get().create(serverLevel);
+            assert gigaVedal != null;
+            gigaVedal.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), this.getXRot());
+            gigaVedal.finalizeSpawn(serverLevel, serverLevel.getCurrentDifficultyAt(gigaVedal.blockPosition()), MobSpawnType.CONVERSION, null, null);
+            gigaVedal.setNoAi(this.isNoAi());
+            if (this.hasCustomName()) {
+                gigaVedal.setCustomName(this.getCustomName());
+                gigaVedal.setCustomNameVisible(this.isCustomNameVisible());
+            }
+            gigaVedal.setPersistenceRequired();
+            serverLevel.addFreshEntityWithPassengers(gigaVedal);
+            this.discard();
+        } else {
+            super.thunderHit(serverLevel, lightningBolt);
+        }
     }
 }

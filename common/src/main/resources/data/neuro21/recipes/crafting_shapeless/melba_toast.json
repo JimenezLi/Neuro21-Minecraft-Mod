@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "neuro21:heart"
+    }
+  ],
+  "result": {
+    "item": "neuro21:melba_toast"
+  }
+}

@@ -1,3 +1,11 @@
+# 0.4.0
+## Features
+- Remove Iron Cow and Iron Milk
+- Heart cannot be eaten directly now, it has to be crafted into food
+- Add food: Neuro21 Doughnut, Melba Toast, Burnt Melba
+- Add entity: Giga Vedal, Miyune
+> Giga Vedal is spawned by striking Vedal with lightning
+
 # 0.3.0
 ## Features
 - Add **Hiyori Boss**, which can be summoned by striking Hiyori with lightning. Hiyori Boss has 3 ultimate moves: summon **Swarm Drones**, summon **Gymbags**, and summon lightning bolts.
