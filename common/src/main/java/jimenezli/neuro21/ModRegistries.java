@@ -12,4 +12,9 @@ public class ModRegistries {
     public static Supplier<? extends SpawnEggItem> SpawnEggSupplierBuilder(Supplier<? extends EntityType<? extends Mob>> supplier, int primaryColor, int secondaryColor) {
         throw new AssertionError();
     }
+
+    @ExpectPlatform
+    public static void setupSpawning() {
+        throw new AssertionError();
+    }
 }

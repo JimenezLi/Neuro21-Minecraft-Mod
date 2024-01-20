@@ -1,3 +1,8 @@
+# 0.4.1
+## Features
+- Miyune now spawns in the overworld in every biome
+> I tried to make Miyune spawn in the end but failed
+
 # 0.4.0
 ## Features
 - Remove Iron Cow and Iron Milk

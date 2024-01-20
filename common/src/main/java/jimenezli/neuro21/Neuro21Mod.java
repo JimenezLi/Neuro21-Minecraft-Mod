@@ -32,6 +32,10 @@ public class Neuro21Mod {
         ITEMS.register();
     }
 
+    public static void Init() {
+        ModRegistries.setupSpawning();
+    }
+
     public static ResourceLocation prefix(String name) {
         return new ResourceLocation(Neuro21Mod.MOD_ID, name);
     }
