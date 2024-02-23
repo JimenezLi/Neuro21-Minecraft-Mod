@@ -1,3 +1,8 @@
+# 0.4.2
+## Features
+- Vedal and Giga Vedal won't be instantly killed by lightning
+- Swarm Drone can catch wolf, which is Neuro's [dogcopter project](https://twitter.com/NeurosamaAI/status/1760777880991096872)
+
 # 0.4.1
 ## Features
 - Miyune now spawns in the overworld in every biome

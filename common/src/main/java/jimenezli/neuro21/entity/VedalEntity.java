@@ -1,12 +1,10 @@
 package jimenezli.neuro21.entity;
 
 import jimenezli.neuro21.entity.ai.goal.NeurosamaFamilyHurtByTargetGoal;
-import jimenezli.neuro21.entity.boss.hiyori.HiyoriBossEntity;
 import jimenezli.neuro21.handler.EntityHandler;
 import jimenezli.neuro21.handler.ItemHandler;
 import jimenezli.neuro21.util.NeurosamaType;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
@@ -67,6 +65,9 @@ public class VedalEntity extends Turtle {
         return NeurosamaType.getNeurosama(type).create(world);
     }
 
+    /**
+     * Turtle near thunder dies immediately, so this method doesn't inherit the parent
+     */
     public void thunderHit(ServerLevel serverLevel, LightningBolt lightningBolt) {
         if (this.getClass() == VedalEntity.class) {
             GigaVedalEntity gigaVedal = EntityHandler.GIGA_VEDAL.get().create(serverLevel);
@@ -81,8 +82,6 @@ public class VedalEntity extends Turtle {
             gigaVedal.setPersistenceRequired();
             serverLevel.addFreshEntityWithPassengers(gigaVedal);
             this.discard();
-        } else {
-            super.thunderHit(serverLevel, lightningBolt);
         }
     }
 }

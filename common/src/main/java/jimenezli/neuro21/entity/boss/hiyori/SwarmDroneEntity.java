@@ -4,6 +4,7 @@ import jimenezli.neuro21.handler.SoundHandler;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -13,9 +14,12 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+
+import java.util.List;
 
 public class SwarmDroneEntity extends Monster {
     public SwarmDroneEntity(EntityType<? extends Monster> entityType, Level level) {
@@ -59,6 +63,28 @@ public class SwarmDroneEntity extends Monster {
 
     protected SoundEvent getDeathSound() {
         return SoundHandler.EXPLOSION.getOrNull();
+    }
+
+    public double getPassengersRidingOffset() {
+        return -(double)this.getType().getDimensions().height * 0.5D;
+    }
+
+    /**
+     * Swarm Drone can catch wolf, which is Neuro's dogcopter project
+     */
+    public void aiStep() {
+        super.aiStep();
+        if (!this.level.isClientSide && this.isAlive()) {
+            if (this.getPassengers().isEmpty()) {
+                List<Entity> nearbyEntities = this.level.getEntities(this, this.getBoundingBox().inflate(2.0, 1.0, 2.0));
+                for (Entity entity : nearbyEntities) {
+                    if ((entity instanceof Wolf) && entity.getVehicle() == null) {
+                        entity.startRiding(this);
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     public void tick() {
